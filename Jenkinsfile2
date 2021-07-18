@@ -1,5 +1,11 @@
 
 pipeline{
+tools{
+        jdk 'myjava'
+        maven 'mymaven'
+    }
+    agent none
+
   stages{
      stage('checkout'){
      agent {label 'Node1'}
