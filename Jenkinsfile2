@@ -16,7 +16,7 @@ tools{
      stage('Build'){
      agent any     
         steps{
-         sh 'mvn clean install -f JavaWebCalculator/pom.xml'
+         sh 'mvn clean install'
         }
      }
   }
