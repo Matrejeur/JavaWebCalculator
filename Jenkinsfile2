@@ -21,7 +21,9 @@ tools{
      }
      stage ('Code Quality')
      {
-         step{
+     agent any
+         steps
+         {
          withSonarQubeEnv('SonarQube'){
          sh 'mvn sonar.sonar'
          }
