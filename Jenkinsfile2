@@ -19,6 +19,14 @@ tools{
          sh 'mvn clean install'
         }
      }
+     stage ('Code Quality')
+     {
+         step{
+         withSonarQubeEnv('SonarQube'){
+         sh 'mvn sonar.sonar'
+         }
+         }
+     }
   }
 
 }
