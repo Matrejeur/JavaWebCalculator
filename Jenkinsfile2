@@ -2,11 +2,13 @@
 pipeline{
   stages{
      stage('checkout'){
+     agent {label 'Node1'}
          steps{
             git 'https://github.com/Matrejeur/JavaWebCalculator.git'
          }
      }
      stage('Build'){
+     agent any     
         steps{
          sh 'mvn clean install -f JavaWebCalculator/pom.xml'
         }
