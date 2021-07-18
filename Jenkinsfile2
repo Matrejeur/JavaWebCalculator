@@ -1,0 +1,16 @@
+
+pipeline{
+  stages{
+     stage('checkout'){
+         steps{
+            git 'https://github.com/Matrejeur/JavaWebCalculator.git'
+         }
+     }
+     stage('Build'){
+        steps{
+         sh 'mvn clean install -f JavaWebCalculator/pom.xml'
+        }
+     }
+  }
+
+}
