@@ -37,8 +37,7 @@ pipeline{
           }
           stage('Deploy')
 	  {
-	      steps
-	      {
+	      steps{
 	         rm -rf mydockerfile
                  mkdir mydockerfile
                  cd mydockerfile
