@@ -38,7 +38,7 @@ pipeline{
          
 	stage('Deploy')  {
 	 steps{
-	        rm -rf mydockerfile}
+	    sh  rm -rf mydockerfile
 mkdir mydockerfile
 cd mydockerfile
 cp /var/lib/jenkins/workspace/webtest/target/WebAppCal-0.0.1.war .
